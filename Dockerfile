@@ -16,4 +16,5 @@ COPY . /app
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-CMD ["gunicorn", "app:app", "--workers", "1", "--threads", "1", "--bind", "0.0.0.0:8000"]
+CMD ["sh", "-c", "gunicorn app:app --workers 1 --threads 1 --bind 0.0.0.0:$PORT"]
+
