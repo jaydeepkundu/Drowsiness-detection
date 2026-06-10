@@ -1,21 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drowsiness Detection System</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" onerror="console.error('Failed to load CSS')">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"
+        onerror="console.error('Failed to load CSS')">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- Fallback inline styles in case CSS fails to load -->
     <style>
-        body { font-family: 'Poppins', sans-serif; background: #1e3c72; color: white; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-        .theme-switch { position: fixed; top: 10px; right: 10px; }
-        .theme-btn { background: none; border: none; color: white; cursor: pointer; font-size: 16px; display: flex; align-items: center; gap: 5px; }
-        .dark-theme { background: #121212; color: #f5f5f5; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #1e3c72;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .theme-switch {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
+
+        .theme-btn {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .dark-theme {
+            background: #121212;
+            color: #f5f5f5;
+        }
     </style>
 </head>
+
 <body>
     <div class="theme-switch">
         <button id="themeToggle" class="theme-btn">
@@ -24,11 +56,11 @@
         </button>
     </div>
     <div class="container">
-        <header>
+       <header>
             <h1><i class="fas fa-eye"></i> Drowsiness Detection System</h1>
             <p class="tagline">Stay Safe, Stay Awake</p>
         </header>
-        
+
         <main>
             <div class="video-container">
                 <div class="video-wrapper">
@@ -50,7 +82,7 @@
                     <span class="status-text">System Ready</span>
                 </div>
             </div>
-            
+
             <div class="info-panel">
                 <h2><i class="fas fa-info-circle"></i> How It Works</h2>
                 <ul>
@@ -60,9 +92,10 @@
                 </ul>
             </div>
         </main>
-        
+
         <footer>
-            <p>&copy; 2025 Drowsiness Detection System | <i class="fas fa-code"></i> with <i class="fas fa-heart"></i></p>
+            <p>&copy; 2025 Drowsiness Detection System | <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+            </p>
         </footer>
     </div>
     <script>
@@ -142,4 +175,5 @@
         }
     </script>
 </body>
+
 </html>

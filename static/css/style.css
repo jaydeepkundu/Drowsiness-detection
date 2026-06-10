@@ -41,9 +41,10 @@ body {
 }
 
 .container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 15px;
     animation: fadeIn 1s ease-in;
     position: relative;
     z-index: 1;
@@ -58,7 +59,7 @@ header {
 header h1 {
     font-size: 3em;
     margin-bottom: 15px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     animation: slideDown 0.8s ease-out;
     letter-spacing: 1px;
     position: relative;
@@ -112,7 +113,7 @@ header h1::after {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(0,255,136,0.1) 0%, rgba(0,0,0,0) 70%);
+    background: radial-gradient(circle, rgba(0, 255, 136, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
     opacity: 0;
     transition: opacity var(--transition-speed) ease;
     pointer-events: none;
@@ -230,17 +231,21 @@ header h1::after {
     gap: 20px;
     justify-content: center;
     margin: 20px 0;
+    flex-wrap: wrap;
 }
 
 .control-btn {
-    padding: 12px 30px;
+    padding: 14px 28px;
+    min-height: 50px;
     border: none;
     border-radius: 25px;
-    font-size: 1.1em;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
     transition: all var(--transition-speed) ease;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     position: relative;
     overflow: hidden;
@@ -310,7 +315,7 @@ header h1::after {
     text-align: center;
     padding: 100px 20px;
     font-size: 1.5em;
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 footer {
@@ -352,37 +357,82 @@ footer i {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes slideDown {
-    from { transform: translateY(-50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.2); opacity: 0.7; }
-    100% { transform: scale(1); opacity: 1; }
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 @keyframes expandWidth {
-    from { width: 0; }
-    to { width: 80px; }
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 80px;
+    }
 }
 
 @keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 @media (max-width: 768px) {
     .container {
-        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
     }
-    
+
+    .control-btn {
+        width: 100%;
+        max-width: 350px;
+        font-size: 1rem;
+        padding: 15px;
+    }
+
     header h1 {
         font-size: 2em;
     }
